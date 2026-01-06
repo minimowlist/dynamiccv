@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Panduan singkat untuk menemani obrolan santai bersama anak">
   <title>Kartu Obrolan Orang Tua</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -10,26 +11,26 @@
 
 <div id="app">
 
-  <!-- START -->
+  <!-- START SCREEN -->
   <div id="start-screen" class="screen active">
     <h1>Kartu Obrolan Orang Tua</h1>
     <p class="subtitle">
       Panduan singkat untuk menemani obrolan santai bersama anak.
     </p>
-    <button id="start-btn">▶︎ Mulai</button>
+    <button id="start-btn" aria-label="Mulai melihat kartu obrolan">▶︎ Mulai</button>
   </div>
 
   <!-- CARD SCREEN -->
   <div id="card-screen" class="screen">
 
     <div class="top-bar">
-      <div id="card-counter"></div>
-      <button id="theme-toggle">🌙</button>
+      <div id="card-counter" aria-live="polite"></div>
+      <button id="theme-toggle" aria-label="Ubah tema gelap/terang">🌙</button>
     </div>
 
-    <!-- STACK -->
+    <!-- CARD STACK -->
     <div id="card-stack">
-      <div class="card layer-0">
+      <div class="card layer-0" role="article" aria-label="Kartu pertanyaan">
         <p class="question"></p>
         <div class="guide">
           <p class="note"></p>
@@ -37,18 +38,24 @@
         </div>
       </div>
 
-      <div class="card layer-1"></div>
-      <div class="card layer-2"></div>
+      <div class="card layer-1" aria-hidden="true"></div>
+      <div class="card layer-2" aria-hidden="true"></div>
     </div>
 
-    <button id="next-btn">▶︎ Berikutnya</button>
+    <button id="next-btn" aria-label="Tampilkan kartu berikutnya">▶︎ Berikutnya</button>
 
-    <div id="guide-toggle">▾ Panduan obrolan</div>
+    <div id="guide-toggle" 
+         role="button" 
+         tabindex="0"
+         aria-expanded="false"
+         aria-label="Tampilkan atau sembunyikan panduan obrolan">
+      ▾ Panduan obrolan
+    </div>
 
   </div>
 
 </div>
 
-<script src="script.js"></script>
+<script type="module" src="script.js"></script>
 </body>
 </html>
