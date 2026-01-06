@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kartu Obrolan Orang Tua</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="app">
+
+  <!-- START -->
+  <div id="start-screen" class="screen active">
+    <h1>Kartu Obrolan Orang Tua</h1>
+    <p class="subtitle">
+      Panduan singkat untuk menemani obrolan santai bersama anak.
+    </p>
+    <button id="start-btn">▶︎ Mulai</button>
+  </div>
+
+  <!-- CARD SCREEN -->
+  <div id="card-screen" class="screen">
+
+    <div class="top-bar">
+      <div id="card-counter"></div>
+      <button id="theme-toggle">🌙</button>
+    </div>
+
+    <!-- STACK -->
+    <div id="card-stack">
+      <div class="card layer-0">
+        <p class="question"></p>
+        <div class="guide">
+          <p class="note"></p>
+          <p class="insight"></p>
+        </div>
+      </div>
+
+      <div class="card layer-1"></div>
+      <div class="card layer-2"></div>
+    </div>
+
+    <button id="next-btn">▶︎ Berikutnya</button>
+
+    <div id="guide-toggle">▾ Panduan obrolan</div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
